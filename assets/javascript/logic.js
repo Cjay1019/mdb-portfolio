@@ -16,7 +16,7 @@ $(".navbar-collapse a").click(function() {
 new WOW().init();
 
 // object-fit polyfill run
-objectFitImages();
+// objectFitImages();
 
 /* init Jarallax */
 jarallax(document.querySelectorAll(".jarallax"));
