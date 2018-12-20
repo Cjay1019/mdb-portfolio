@@ -20,7 +20,7 @@
       href="assets/images/favicon.png"
       sizes="16x16 32x32"
     />
-    <title>Document</title>
+    <title>Conner Leigh</title>
   </head>
   <body class="developer indigo-skin" aria-busy="true">
     <header id="home">
@@ -29,7 +29,7 @@
         class="navbar fixed-top navbar-expand-lg indigo navbar-dark scrolling-navbar"
       >
         <div class="container">
-          <a class="navbar-brand">Conner Leigh</a>
+          <span class="navbar-brand brand">Conner Leigh</span>
           <button
             class="navbar-toggler"
             type="button"
@@ -65,12 +65,18 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#projects"
+                <a
+                  class="nav-link waves-effect waves-light"
+                  href="#projects"
+                  data-offset="100"
                   >Projects</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link waves-effect waves-light" href="#contact"
+                <a
+                  class="nav-link waves-effect waves-light"
+                  href="#contact"
+                  data-offset="100"
                   >Contact</a
                 >
               </li>
@@ -146,8 +152,8 @@
     <!-- MAIN CONTENT -->
     <main>
       <div class="container">
+        <!-- ABOUT SECTION -->
         <section id="about" class="section feature-box mb-5">
-          <!-- SECTION TITLE -->
           <h2
             class="text-center my-5 pt-5 wow fadeIn"
             data-wow-delay="0.2s"
@@ -231,8 +237,8 @@
         </section>
       </div>
       <div class="container-fluid" style="background-color: #f3f3f5;">
-        <div class="container py-4 pt-4">
-          <!-- Second section -->
+        <div class="container py-4 pt-4 mb-4">
+          <!-- SKILLS SECTION -->
           <section id="skills">
             <!-- First row -->
             <div class="row py-5">
@@ -419,7 +425,280 @@
             </div>
             <!-- /First row -->
           </section>
-          <!-- /.Second section -->
+          <!-- /.SKILLS SECTION -->
+        </div>
+      </div>
+      <div class="container">
+        <!-- Fourth section -->
+        <section id="projects" class="section mb-5">
+          <!-- Section title -->
+          <h2
+            class="text-center text-uppercase my-5 pt-5 wow fadeIn"
+            data-wow-delay="0.2s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;"
+          >
+            My <span class="indigo-text font-weight-bold">projects</span>
+          </h2>
+
+          <!-- Section description -->
+          <p
+            class="text-center w-responsive mx-auto wow fadeIn my-5"
+            style="visibility: visible; animation-name: fadeIn;"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste
+            provident, voluptatum voluptatibus aut modi aspernatur autem
+            impedit, eius, debitis earum voluptatem. Quaerat hic aspernatur
+            laborum magni earum. At, officiis!
+          </p>
+
+          <!-- First row -->
+          <div
+            class="row wow fadeIn"
+            data-wow-delay="0.4s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;"
+          >
+            <!-- PROJECT CAROUSEL -->
+            <div class="col-md-12 mb-5">
+              <!--Carousel Wrapper-->
+              <div
+                id="carousel-example-2"
+                class="carousel slide carousel-fade"
+                data-ride="carousel"
+              >
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carousel-example-2"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <a
+                      href="https://cjay1019.github.io/word-guess-game/"
+                      target="_blank"
+                      ><div class="view overlay zoom">
+                        <img
+                          class="d-block w-100"
+                          src="assets/images/zelda.jpg"
+                          alt="First slide"
+                        />
+                        <div class="mask rgba-black-light link">
+                          <div class="carousel-caption">
+                            <h3 class="h3-responsive">Zelda Word Guess Game</h3>
+                          </div>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      href="https://cjay1019.github.io/unit-4-game/"
+                      target="_blank"
+                      ><div class="view overlay zoom">
+                        <img
+                          class="d-block w-100"
+                          src="assets/images/rpg.jpg"
+                          alt="First slide"
+                        />
+                        <div class="mask rgba-black-light link">
+                          <div class="carousel-caption">
+                            <h3 class="h3-responsive">D&D Role Playing Game</h3>
+                          </div>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                  <div class="carousel-item">
+                    <a
+                      href="https://cjay1019.github.io/trivia-game/"
+                      target="_blank"
+                      ><div class="view overlay zoom">
+                        <img
+                          class="d-block w-100"
+                          src="assets/images/mcu.jpg"
+                          alt="First slide"
+                        />
+                        <div class="mask rgba-black-light link">
+                          <div class="carousel-caption">
+                            <h3 class="h3-responsive">Marvel Trivia Game</h3>
+                          </div>
+                        </div>
+                      </div></a
+                    >
+                  </div>
+                </div>
+                <!--/.Slides-->
+                <!--Controls-->
+                <a
+                  class="carousel-control-prev"
+                  href="#carousel-example-2"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carousel-example-2"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                <!--/.Controls-->
+              </div>
+              <!--/.Carousel Wrapper-->
+            </div>
+            <!-- /.PROJECT CAROUSEL -->
+          </div>
+          <!-- /.First row -->
+        </section>
+        <!-- /.Fourth section -->
+      </div>
+      <!-- CONTACT SECTION -->
+      <div id="contact" class="container">
+        <section class="section contact-section mt-4 pb-5">
+          <!--Section heading-->
+          <h2
+            class="text-center text-uppercase my-5 pt-5 wow fadeIn"
+            data-wow-delay="0.2s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;"
+          >
+            Contact <span class="indigo-text font-weight-bold">ME</span>
+          </h2>
+          <!--Section sescription-->
+          <p
+            class="text-center w-responsive mx-auto mb-5 pb-4 wow fadeIn"
+            data-wow-delay="0.2s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
+            error amet numquam iure provident voluptate esse quasi, veritatis
+            totam voluptas nostrum quisquam eum porro a pariatur accusamus
+            veniam.
+          </p>
+          <div
+            class="row wow fadeIn"
+            data-wow-delay="0.4s"
+            style="visibility: visible; animation-name: fadeIn; animation-delay: 0.4s;"
+          >
+            <!--First column-->
+            <div class="col-md-8 mb-5">
+              <form>
+                <!--First row-->
+                <div class="row">
+                  <!--First column-->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <div class="md-form mb-0">
+                        <input type="text" id="form41" class="form-control" />
+                        <label for="form41" class="">Your name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Second column-->
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                      <div class="md-form mb-0">
+                        <input type="text" id="form52" class="form-control" />
+                        <label for="form52" class="">Your email</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/.First row-->
+
+                <!--Second row-->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <input type="text" id="form51" class="form-control" />
+                      <label for="form51" class="">Subject</label>
+                    </div>
+                  </div>
+                </div>
+                <!--/Second row-->
+
+                <!--Third row-->
+                <div class="row">
+                  <!--First column-->
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <textarea
+                        type="text"
+                        id="form76"
+                        class="md-textarea form-control"
+                        rows="3"
+                      ></textarea>
+                      <label for="form76">Your message</label>
+                    </div>
+                  </div>
+                </div>
+                <!--/.Third row-->
+              </form>
+              <div class="text-center text-md-left mt-4">
+                <a class="btn btn-primary waves-effect waves-light">Send</a>
+              </div>
+            </div>
+            <!--.First column-->
+
+            <!--Second column-->
+            <div class="col-md-4">
+              <ul class="contact-icons list-unstyled text-center">
+                <li>
+                  <i class="fa fa-map-marker fa-2x"></i>
+                  <p>Chapel Hill, NY 27517, USA</p>
+                </li>
+                <li>
+                  <i class="fa fa-phone fa-2x"></i>
+                  <p>+ 1 716 799 9582</p>
+                </li>
+                <li>
+                  <i class="fa fa-envelope fa-2x"></i>
+                  <p>conner.j.leigh@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+            <!--.Second column-->
+          </div>
+        </section>
+        <!--/CONTACT SECTION-->
+      </div>
+      <div class="streak1">
+        <div class="flex-center">
+          <ul class="list-unstyled">
+            <li>
+              <h2
+                class="h2-responsive mt-5 wow fadeIn"
+                style="visibility: visible; animation-name: fadeIn;"
+              >
+                Want an outstanding project?
+              </h2>
+            </li>
+            <li>
+              <h5
+                class="h5-responsive wow fadeIn"
+                data-wow-delay="0.2s"
+                style="visibility: visible; animation-name: fadeIn; animation-delay: 0.2s;"
+              >
+                Just send me a message!
+              </h5>
+            </li>
+          </ul>
         </div>
       </div>
     </main>

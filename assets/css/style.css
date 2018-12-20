@@ -22,3 +22,19 @@ header,
   clip: rect(0 1292px 938px 0);
   clip: rect(0, 1292px, 938px, 0);
 }
+
+.carousel .carousel-control-prev-icon {
+  background-image: url(../images/left.svg);
+}
+
+.carousel .carousel-control-next-icon {
+  background-image: url(../images/right.svg);
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+.brand:hover {
+  cursor: context-menu;
+}
