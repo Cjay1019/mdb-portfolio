@@ -24,3 +24,27 @@ jarallax(document.querySelectorAll(".jarallax"));
 jarallax(document.querySelectorAll(".jarallax-keep-img"), {
   keepImg: true
 });
+
+$(".alert").alert();
+
+$("#form-submit").on("click", function(e) {
+  e.preventDefault();
+  var contact = {
+    name: $("#name")
+      .val()
+      .trim(),
+    email: $("#email")
+      .val()
+      .trim(),
+    subject: $("#subject")
+      .val()
+      .trim(),
+    message: $("#message")
+      .val()
+      .trim()
+  };
+  $.post("/email", contact).then(function(data) {
+    $("#message").val("");
+    $("#messageLabel").attr("class", "");
+  });
+});
