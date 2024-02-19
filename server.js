@@ -11,11 +11,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+var allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+  next();
+}
+
+app.use(allowCrossDomain);
+
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 app.post("/email", function(req, res) {
+  console.log("test")
   var mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -34,10 +45,14 @@ app.post("/email", function(req, res) {
       req.body.message
     }`
   };
+  console.log(smtpTrans)
+  console.log(mailOpts)
   smtpTrans.sendMail(mailOpts, function(error, response) {
     if (error) {
+      console.log(error)
       res.sendStatus(500);
     } else {
+      console.log(response)
       res.sendStatus(200);
       console.log("success");
     }
