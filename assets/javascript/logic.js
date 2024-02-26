@@ -43,7 +43,7 @@ $("#form-submit").on("click", function(e) {
       .val()
       .trim()
   };
-  $.post("/email", contact).then(function(data) {
+  $.post("/api/contactMe", JSON.stringify(contact)).then(function(data) {
     $("#message").val("");
     $("#messageLabel").attr("class", "");
   });
