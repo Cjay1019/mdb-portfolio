@@ -43,8 +43,14 @@ $("#form-submit").on("click", function(e) {
       .val()
       .trim()
   };
-  $.post("/api/contactMe", JSON.stringify(contact)).then(function(data) {
-    $("#message").val("");
-    $("#messageLabel").attr("class", "");
+  $.ajax({
+    url: "/api/contactMe",
+    type: "POST",
+    data: JSON.stringify(contact),
+    contentType: "application/json; charset=utf-8",
+    success: function(data) {
+      $("#message").val("");
+      $("#messageLabel").attr("class", "");
+    }
   });
 });

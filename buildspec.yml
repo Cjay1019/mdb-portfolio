@@ -7,9 +7,14 @@ phases:
       nodejs: 18
   pre_build:
     commands:
-      - aws s3 cp --recursive --acl public-read ./assets s3://$BUCKET_NAME/mdb-portfolio/assets
-      - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./index.html s3://$BUCKET_NAME/mdb-portfolio/index.html
+      - npm install --omit=dev
+      - aws s3 cp --recursive --acl public-read ./client/assets s3://$BUCKET_NAME/mdb-portfolio/assets
+      - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./client/index.html s3://$BUCKET_NAME/mdb-portfolio/index.html
       - aws cloudfront create-invalidation --distribution-id $DIST_ID --paths /index.html
+      - zip code.zip lambdas/contactMe.mjs node_modules/
+      - aws lambda update-function-code \
+        --function-name  $CONTACT_ME_ARN \
+        --zip-file fileb://code.zip
 artifacts:
   files:
     - "**/*"
