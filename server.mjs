@@ -1,17 +1,14 @@
-// const express = require("express");
 import express from "express";
-const app = express();
-// const path = require("path");
 import path from "path";
 import { fileURLToPath } from 'url';
-// const dotenv = require("dotenv")
 import dotenv from "dotenv";
 import routes from "./routes/api.mjs";
 dotenv.config()
+const app = express();
 const PORT = process.env.PORT;
 
 // Define middleware here
-app.use(express.json());
+app.use(express.text());
 
 // Sets client directory as static so the index file can reference other files
 const __filename = fileURLToPath(import.meta.url);

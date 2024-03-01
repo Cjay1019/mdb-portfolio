@@ -47,7 +47,7 @@ $("#form-submit").on("click", function(e) {
     url: "/api/contactMe",
     type: "POST",
     data: JSON.stringify(contact),
-    contentType: "application/json; charset=utf-8",
+    contentType: "text/plain",
     success: function(data) {
       $("#message").val("");
       $("#messageLabel").attr("class", "");
